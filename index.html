@@ -363,6 +363,66 @@
   .fact-label{font-family:var(--font-mono);color:var(--text-faint);font-size:12.5px;letter-spacing:0.04em;}
   .fact-value{color:var(--text);text-align:right;font-weight:500;}
 
+  /* ===== Services ===== */
+  .service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }
+  .service-card{
+    background:rgba(19,26,36,0.5);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid var(--line-soft);
+    border-radius:14px;
+    padding:30px;
+    transition:all .3s cubic-bezier(.2,.7,.3,1);
+  }
+  .service-card:hover{
+    border-color:rgba(47,217,196,0.3);
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px -20px rgba(0,0,0,0.5);
+    background:rgba(24,32,44,0.7);
+  }
+  .service-num{
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--teal);
+    letter-spacing:0.08em;
+    margin-bottom:16px;
+    display:block;
+  }
+  .service-card h3{
+    font-size:17px;
+    font-weight:600;
+    margin-bottom:12px;
+    line-height:1.3;
+  }
+  .service-card ul{
+    display:flex;flex-direction:column;gap:9px;
+  }
+  .service-card li{
+    font-size:13.5px;
+    color:var(--text-dim);
+    line-height:1.5;
+    padding-left:16px;
+    position:relative;
+  }
+  .service-card li::before{
+    content:'';
+    position:absolute;left:0;top:8px;
+    width:5px;height:1px;
+    background:var(--teal);
+  }
+  .services-intro{
+    color:var(--text-dim);
+    font-size:15.5px;
+    max-width:720px;
+    margin-bottom:44px;
+  }
+  @media(max-width:900px){.service-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:620px){.service-grid{grid-template-columns:1fr;}}
+
   /* ===== Skills ===== */
   .skills-grid{
     display:grid;
@@ -517,6 +577,16 @@
     html{scroll-behavior:auto;}
   }
 
+  /* Print: fixed elements repeat on every printed page in Chromium's print
+     engine — pin them to the top of the document instead so they render once. */
+  @media print{
+    header{position:absolute;top:0;}
+    .spine{display:none;}
+    .mobile-nav{display:none;}
+    section{padding-top:100px;}
+    #hero{min-height:0;padding-top:100px;}
+  }
+
   @media(max-width:900px){
     .hero-grid{grid-template-columns:1fr;}
     .hero-visual{order:-1;max-width:420px;}
@@ -561,6 +631,7 @@
     <a href="#hero" class="logo">AHMED<span class="dot">.</span>ALI</a>
     <div class="nav-links" id="navLinks">
       <a href="#about">about</a>
+      <a href="#services">services</a>
       <a href="#skills">skills</a>
       <a href="#projects">projects</a>
       <a href="#certs">certifications</a>
@@ -573,10 +644,11 @@
 
 <div class="mobile-nav" id="mobileNav">
   <a href="#about">01 / about</a>
-  <a href="#skills">02 / skills</a>
-  <a href="#projects">03 / projects</a>
-  <a href="#certs">04 / certifications</a>
-  <a href="#contact">05 / contact</a>
+  <a href="#services">02 / services</a>
+  <a href="#skills">03 / skills</a>
+  <a href="#projects">04 / projects</a>
+  <a href="#certs">05 / certifications</a>
+  <a href="#contact">06 / contact</a>
 </div>
 
 <!-- HERO -->
@@ -651,11 +723,70 @@
   </div>
 </section>
 
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">02 · services</div>
+      <h2>What I can build for you.</h2>
+      <p class="services-intro">A Data Engineer specializing in designing and building databases, developing data pipelines, and executing end-to-end ETL/ELT processes. I rely on tools like Python, SQL (MySQL, PostgreSQL), and Docker to handle complex, large-scale data efficiently — delivering clean, high-quality, scalable data solutions that support smart business decisions.</p>
+    </div>
+    <div class="service-grid reveal">
+
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <h3>Database Design & Modeling</h3>
+        <ul>
+          <li>Relational and NoSQL schema design, applied with proper normalization and query-efficiency in mind.</li>
+          <li>Writing and optimizing complex SQL queries and stored procedures.</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <h3>ETL / ELT Pipeline Development</h3>
+        <ul>
+          <li>Extracting data from multiple sources, cleaning, transforming, and loading it accurately into data warehouses.</li>
+          <li>Automating data flows to keep pipelines updated and consistently reliable.</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <h3>Data Cleaning & Preprocessing</h3>
+        <ul>
+          <li>Detecting and handling missing values, duplicates, and inconsistencies in large datasets.</li>
+          <li>Merging and integrating data from different sources into a single, analysis-ready format.</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <h3>Containerization & Deployment</h3>
+        <ul>
+          <li>Packaging data applications and environments with Docker and Docker Compose.</li>
+          <li>Building setups that run consistently across different servers and environments.</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">05</span>
+        <h3>Web Data Extraction</h3>
+        <ul>
+          <li>Collecting and structuring data from websites in a form ready for direct storage.</li>
+          <li>Building scraping workflows that feed straight into a database or pipeline.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- SKILLS -->
 <section id="skills">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">02 · skills</div>
+      <div class="eyebrow">03 · skills</div>
       <h2>Toolkit, by layer.</h2>
       <p>From raw data to relational storage — the languages and tools I use to move it, model it, and serve it.</p>
     </div>
@@ -692,7 +823,7 @@
 <section id="projects">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">03 · projects</div>
+      <div class="eyebrow">04 · projects</div>
       <h2>Selected work.</h2>
       <p>Three projects spanning the pipeline: raw data ingestion, evidence-grounded retrieval, and interactive visualization.</p>
     </div>
@@ -736,7 +867,7 @@
 <section id="certs">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">04 · training & certifications</div>
+      <div class="eyebrow">05 · training & certifications</div>
       <h2>Currently in progress.</h2>
     </div>
     <div class="cert-grid reveal">
@@ -760,7 +891,7 @@
 <section id="contact">
   <div class="wrap contact-grid">
     <div class="reveal">
-      <div class="eyebrow">05 · contact</div>
+      <div class="eyebrow">06 · contact</div>
       <h2>Let's build something that pipes clean data.</h2>
       <p class="hero-desc">Open to Data Engineering internships and entry-level roles. Reach out directly — I usually reply within a day.</p>
     </div>
