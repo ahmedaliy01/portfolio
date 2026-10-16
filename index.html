@@ -227,7 +227,7 @@
   .focus-chip .fdot{width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;}
 
   /* ===== Projects ===== */
-  .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
   .project-card{background:rgba(19,26,36,0.5);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line-soft);border-radius:16px;display:flex;flex-direction:column;transition:all .3s cubic-bezier(.2,.7,.3,1);}
   .project-card:hover{border-color:rgba(47,217,196,0.3);transform:translateY(-4px);box-shadow:0 24px 48px -24px rgba(0,0,0,0.6);}
   .project-thumb{position:relative;aspect-ratio:16/10;background:var(--bg-elev-2);border-bottom:1px solid var(--line-soft);}
@@ -377,7 +377,7 @@
       </div>
       <div class="hero-meta">
         <div><strong>3.8 / 4.0</strong>CGPA</div>
-        <div><strong>3</strong>shipped projects</div>
+        <div><strong>4</strong>shipped projects</div>
         <div><strong>B2</strong>English · native Arabic</div>
       </div>
     </div>
@@ -457,6 +457,15 @@
       </div>
 
       <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/><rect x="3" y="16" width="18" height="4" rx="1"/></svg></div>
+        <h3>Data Warehouse Design</h3>
+        <ul>
+          <li>Layered Bronze / Silver / Gold architecture that turns raw source data into trusted, analytics-ready tables.</li>
+          <li>Star-schema modeling with dimensions and facts, plus documented data catalogs and naming conventions.</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></div>
         <h3>Containerization & Deployment</h3>
         <ul>
@@ -489,19 +498,27 @@
     <div class="skills-grid reveal">
       <div class="skill-panel">
         <div class="sp-head"><span class="idx">//</span> programming languages</div>
-        <div class="chip-row"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">Java</span></div>
+        <div class="chip-row"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">T-SQL</span><span class="chip">JavaScript</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">Java</span></div>
       </div>
       <div class="skill-panel">
         <div class="sp-head"><span class="idx">//</span> data engineering & databases</div>
-        <div class="chip-row"><span class="chip">ETL / ELT</span><span class="chip">Data Pipelines</span><span class="chip">Data Modeling</span><span class="chip">Data Warehousing</span><span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span></div>
+        <div class="chip-row"><span class="chip">ETL / ELT</span><span class="chip">Data Pipelines</span><span class="chip">Data Modeling</span><span class="chip">Data Warehousing</span><span class="chip">Medallion Architecture</span><span class="chip">Star Schema</span><span class="chip">Data Quality</span><span class="chip">Stored Procedures</span><span class="chip">Window Functions</span><span class="chip">Indexing & Query Plans</span><span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">SQLAlchemy</span></div>
       </div>
       <div class="skill-panel">
         <div class="sp-head"><span class="idx">//</span> tools & infrastructure</div>
-        <div class="chip-row"><span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">GitHub</span></div>
+        <div class="chip-row"><span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">Docker Compose</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">GitHub Pages</span><span class="chip">SSMS</span><span class="chip">Jupyter</span><span class="chip">VS Code</span></div>
       </div>
       <div class="skill-panel">
         <div class="sp-head"><span class="idx">//</span> ai & llms</div>
-        <div class="chip-row"><span class="chip">RAG</span><span class="chip">Vector Search</span><span class="chip">Ollama</span></div>
+        <div class="chip-row"><span class="chip">RAG</span><span class="chip">Vector Search</span><span class="chip">Qdrant</span><span class="chip">Embeddings</span><span class="chip">Hybrid Chunking</span><span class="chip">Docling</span><span class="chip">Citation Validation</span><span class="chip">Grounded Generation</span><span class="chip">Ollama</span></div>
+      </div>
+      <div class="skill-panel">
+        <div class="sp-head"><span class="idx">//</span> web & front-end</div>
+        <div class="chip-row"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">React</span></div>
+      </div>
+      <div class="skill-panel">
+        <div class="sp-head"><span class="idx">//</span> computer science fundamentals</div>
+        <div class="chip-row"><span class="chip">Data Structures</span><span class="chip">Algorithms</span><span class="chip">Probability & Statistics</span><span class="chip">Linear Algebra</span></div>
       </div>
     </div>
   </div>
@@ -594,7 +611,7 @@
     <div class="section-head reveal">
       <div class="eyebrow">05 · projects</div>
       <h2>Selected work.</h2>
-      <p>Three projects spanning the pipeline: raw data ingestion, evidence-grounded retrieval, and interactive visualization.</p>
+      <p>Four projects spanning the pipeline: raw data ingestion, warehouse modeling, evidence-grounded retrieval, and interactive visualization.</p>
     </div>
     <div class="project-grid reveal">
 
@@ -613,6 +630,25 @@
           <p class="p-desc">A containerized ETL pipeline that extracts raw CSV data, cleans and standardizes it, and loads it into a MySQL database running in Docker — with schema normalization, encoding-safe parsing, and automated ingestion via SQLAlchemy.</p>
           <div class="p-stack"><span>Python</span><span>SQL</span><span>MySQL</span><span>Docker</span></div>
           <a class="p-link" href="https://github.com/ahmedaliy01/end-to-end-etl-pipline" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb">
+          <div class="thumb-clip">
+            <div class="project-thumb-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/><rect x="3" y="16" width="18" height="4" rx="1"/></svg>
+              <span>// bronze → silver → gold</span>
+            </div>
+            <img src="project-dw.jpg" alt="SQL Server Data Warehouse project" style="position:absolute;inset:0;" onerror="this.remove()">
+          </div>
+          <div class="project-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/><rect x="3" y="16" width="18" height="4" rx="1"/></svg></div>
+        </div>
+        <div class="project-body">
+          <div class="p-title-row"><h3>SQL Server Data Warehouse</h3><span class="p-badge">medallion</span></div>
+          <p class="p-desc">An end-to-end data warehouse in SQL Server that integrates CRM and ERP CSV sources through Bronze, Silver, and Gold layers — T-SQL load procedures, data cleansing and standardization, and a star-schema Gold layer (customer and product dimensions with a sales fact) ready for analytics.</p>
+          <div class="p-stack"><span>SQL Server</span><span>T-SQL</span><span>Medallion</span><span>Star Schema</span></div>
+          <a class="p-link" href="https://github.com/ahmedaliy01/Data-Warehouse-project" target="_blank" rel="noopener">View repo ↗</a>
         </div>
       </div>
 
